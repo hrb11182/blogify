@@ -1,0 +1,50 @@
+
+
+@media(min-width:480px) and (max-width:767px) {
+.trending-img-size {
+    height: 226px;
+}
+
+.trending-img-size > img {
+    height: 240px;
+}
+
+.trending-img-relative {
+    right: 0;
+}
+
+}
+
+
+ @media screen and (min-width: 800px) {
+    .nav-center {
+      max-width: 1170px;
+      height: 5em;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1em;
+    }
+    .nav-header {
+      padding: 0;
+    }
+    .nav-toggle {
+      display: none;
+    }
+    .links-container {
+      height: auto !important;
+    }
+    .links {
+      display: flex;
+    }
+    .links a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+    .links a:hover {
+      padding: 0;
+      background: transparent;
+    }
+  }
+  
