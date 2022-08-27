@@ -34,7 +34,7 @@ const Navbar = ({ user, handleLogout }) => {
               <li style={{ marginLeft: "0.3125em", marginTop:"0.9375em", }}>Home</li>
             </Link>
             <Link to="/create">
-              <li style={{ marginLeft: "0.9em", marginTop:"0.9375em", }}>Cate</li>
+              <li style={{ marginLeft: "0.9em", marginTop:"0.9375em", }}>Create</li>
             </Link>
             <Link to="/about">
               <li style={{ marginLeft: "1.9125em", marginTop:"0.9375em", marginRight:"1.5625em" }}>About</li>
