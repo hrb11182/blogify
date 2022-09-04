@@ -23,25 +23,39 @@ const Navbar = ({ user, handleLogout }) => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} className="logo" alt="logo" />
+          <Link to="/">
+            <img src={logo} className="logo" alt="logo" />
+          </Link>
           <button className="nav-toggle" onClick={toggleLinks}>
             <FaBars />
           </button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
-            <Link to="/">
-              <li style={{ marginLeft: "0.3125em", marginTop:"0.9375em", }}>Home</li>
+            <Link to="/" onClick={toggleLinks}>
+              <li style={{ marginLeft: "0.3125em", marginTop: "0.9375em" }}>
+                Home
+              </li>
             </Link>
-            <Link to="/create">
-              <li style={{ marginLeft: "0.9em", marginTop:"0.9375em", }}>Create</li>
+            <Link to="/create" onClick={toggleLinks}>
+              <li style={{ marginLeft: "0.9em", marginTop: "0.9375em" }}>
+                Create
+              </li>
             </Link>
-            <Link to="/about">
-              <li style={{ marginLeft: "1.9125em", marginTop:"0.9375em", marginRight:"1.5625em" }}>About</li>
+            <Link to="/about" onClick={toggleLinks}>
+              <li
+                style={{
+                  marginLeft: "1.9125em",
+                  marginTop: "0.9375em",
+                  marginRight: "1.5625em",
+                }}
+              >
+                About
+              </li>
             </Link>
             {userId ? (
               <>
-                <div className="profile-logo">
+                <div className="profile-logo" onClick={toggleLinks}>
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
                     alt="logo"
@@ -49,19 +63,39 @@ const Navbar = ({ user, handleLogout }) => {
                       width: "1.875em",
                       height: "1.875em",
                       borderRadius: "50%",
-                      marginTop:"0.75em",
-                      marginLeft:"0.8em"
+                      marginTop: "0.75em",
+                      marginLeft: "0.8em",
                     }}
                   />
                 </div>
-                <p className="name" style={{ color: 'hsl(205, 72%, 37%)', marginLeft: "0.8125em", marginTop:"0.9375em", }}>
+                <p
+                  className="name"
+                  style={{
+                    color: "hsl(205, 72%, 37%)",
+                    marginLeft: "0.8125em",
+                    marginTop: "0.9375em",
+                  }}
+                >
                   {user?.displayName}
                 </p>
-                <li className="logout" style={{ color: 'hsl(205, 72%, 37%)', marginLeft: "1.5625em", cursor:"pointer", marginTop:"0.9375em", }} onClick={handleLogout}>Logout</li>
+                <li
+                  className="logout"
+                  style={{
+                    color: "hsl(205, 72%, 37%)",
+                    marginLeft: "1.5625em",
+                    cursor: "pointer",
+                    marginTop: "0.9375em",
+                  }}
+                  onClick={handleLogout}
+                >
+                  <span onClick={toggleLinks}>Logout</span>
+                </li>
               </>
             ) : (
-              <Link to="/auth">
-                <li style={{ marginLeft: "0.3125em", marginTop:"0.9375em", }}>Login</li>
+              <Link to="/auth" onClick={toggleLinks}>
+                <li style={{ marginLeft: "0.3125em", marginTop: "0.9375em" }}>
+                  Login
+                </li>
               </Link>
             )}
           </ul>
