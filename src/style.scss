@@ -89,7 +89,7 @@ $blue: rgb(53, 156, 196);
 }
 
 .btn-add {
-  background: #bf7034 !important;
+  background: $blue !important;
   @include border-radius(0!important);
   color: #fff !important;
   padding: 10px 50px !important;
@@ -448,6 +448,7 @@ $blue: rgb(53, 156, 196);
 nav {
   background: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 22px;
   ul {
     list-style-type: none;
   }
